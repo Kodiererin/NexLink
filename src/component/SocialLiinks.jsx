@@ -28,7 +28,7 @@ const SocialLinks = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-        <h1 className="text-5xl font-bold text-white mb-8 animate-pulse">NexGraph</h1>
+        <h1 className="text-5xl font-bold text-white mb-8 animate-pulse">NexLink</h1>
         <ImSpinner9 className="animate-spin text-white text-6xl" />
         <p className="text-white mt-4 animate-pulse">Loading...</p>
       </div>
@@ -45,7 +45,7 @@ const SocialLinks = () => {
         <div className="flex flex-col items-center justify-center">
           {/* Adding a Glowing Title with Gradient and Shadow */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 drop-shadow-lg text-center tracking-widest animate-glow">
-            NexGraph
+            NexLink
           </h1>
           {/* Some Subtitle with Subtle Fade and Spacing */}
           <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 text-center mt-2 sm:mt-4 max-w-xs sm:max-w-lg lg:max-w-xl tracking-wide animate-fade-in opacity-90">
