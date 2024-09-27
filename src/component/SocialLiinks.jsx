@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { ImSpinner9 } from 'react-icons/im'; // Loader icon
 import InteractiveBackground from '../three/ThreeJSBackground';
+import socialMap from '../../socials';
+
+
+const social = socialMap;
 
 const SocialLinks = () => {
   const [loading, setLoading] = useState(true);
@@ -13,11 +17,11 @@ const SocialLinks = () => {
   }, []);
 
   const links = [
-    { name: "Instagram", icon: <FaInstagram />, url: "https://instagram.com" },
-    { name: "Facebook", icon: <FaFacebook />, url: "https://facebook.com" },
-    { name: "GitHub", icon: <FaGithub />, url: "https://github.com" },
-    { name: "LinkedIn", icon: <FaLinkedin />, url: "https://linkedin.com" },
-    { name: "Twitter", icon: <FaTwitter />, url: "https://twitter.com" },
+    { name: "Instagram", icon: <FaInstagram />, url: social.get('instagram') },
+    { name: "Facebook", icon: <FaFacebook />, url: social.get('facebook') },
+    { name: "GitHub", icon: <FaGithub />, url: social.get('github') },
+    { name: "LinkedIn", icon: <FaLinkedin />, url: social.get('linkedin') },
+    { name: "Twitter", icon: <FaTwitter />, url: social.get('twitter') },
   ];
 
   // Loader component
