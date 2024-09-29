@@ -43,7 +43,7 @@ const SocialLinks = () => {
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-        <h1 className="text-5xl font-bold text-white mb-8 animate-pulse">
+        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 animate-pulse">
           NexLink
         </h1>
         <ImSpinner9 className="animate-spin text-white text-6xl" />
@@ -62,13 +62,13 @@ const SocialLinks = () => {
       <InteractiveBackground />
 
       {/* Header */}
-      <header className="relative z-10 py-10 sm:py-12">
+      <header className="relative z-10 py-8 sm:py-12">
         <div className="flex flex-col items-center justify-center">
           {/* Adding a Glowing Title with Gradient and Shadow */}
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 drop-shadow-lg text-center tracking-widest animate-glow">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 drop-shadow-lg text-center tracking-wider animate-glow">
             NexLink
           </h1>
-          {/* Some Subtitle with Subtle Fade and Spacing */}
+          {/* Subtitle */}
           <p className="text-lg sm:text-xl lg:text-2xl text-center mt-2 sm:mt-4 max-w-xs sm:max-w-lg lg:max-w-xl tracking-wide animate-fade-in opacity-90">
             Your gateway to{" "}
             <span
@@ -89,12 +89,12 @@ const SocialLinks = () => {
             social connections.
           </p>
 
-          {/* Some Decorative Underline */}
+          {/* Decorative Underline */}
           <div className="w-16 h-1 sm:w-20 bg-gradient-to-r from-pink-500 to-purple-500 mt-3 sm:mt-4 rounded-full animate-pulse"></div>
         </div>
       </header>
 
-      {/* Toggle Theme Button in the Corner */}
+      {/* Toggle Theme Button */}
       <div className="absolute top-4 right-4 z-50">
         <div
           className="relative inline-flex items-center cursor-pointer p-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out"
@@ -122,28 +122,26 @@ const SocialLinks = () => {
       </div>
 
       {/* Social Links */}
-      <div className="relative z-10 flex items-center justify-center py-10 sm:py-12">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl p-8 sm:p-12 max-w-md sm:max-w-lg lg:max-w-3xl transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-3xl">
-          {/* Adding Animated Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-center mb-6 sm:mb-8 lg:mb-10 tracking-widest animate-glow">
+      <div className="relative z-10 flex items-center justify-center py-10 sm:py-12 px-4">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-lg lg:max-w-3xl transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-3xl">
+          {/* Animated Title */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-center mb-4 sm:mb-6 lg:mb-8 tracking-wide animate-glow">
             Let&apos;s Connect
           </h2>
 
           {/* Links */}
-          <ul className="flex flex-col items-center space-y-4 sm:space-y-6">
+          <ul className="flex flex-col items-center space-y-3 sm:space-y-5">
             {links.map((link, index) => (
               <li key={index} className="w-full">
                 <a
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-6 sm:px-8 py-4 sm:py-5 bg-white dark:bg-gray-900 rounded-full shadow-lg hover:bg-purple-50 dark:hover:bg-purple-800 hover:text-purple-800 dark:hover:text-white transform transition-all hover:scale-110 hover:shadow-2xl"
+                  className="flex items-center justify-between px-5 sm:px-6 py-3 sm:py-4 bg-white dark:bg-gray-900 rounded-full shadow-lg hover:bg-purple-50 dark:hover:bg-purple-800 hover:text-purple-800 dark:hover:text-white transform transition-all hover:scale-105 hover:shadow-2xl"
                 >
-                  {/* Adding Icon with Glow Effect */}
-                  <span className="text-2xl sm:text-3xl text-purple-600 transform hover:scale-125 transition-transform duration-300 ease-in-out">
+                  <span className="text-2xl sm:text-3xl text-purple-600 transform hover:scale-110 transition-transform duration-300 ease-in-out">
                     {link.icon}
                   </span>
-                  {/* Adding Text with Animation */}
                   <span className="ml-3 sm:ml-4 text-base sm:text-lg font-medium text-gray-900 dark:text-gray-200 transform transition-colors hover:text-purple-600 dark:hover:text-white">
                     {link.name}
                   </span>
