@@ -60,7 +60,7 @@ const SocialLinks = () => {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      {/* Adding the Three.js Background which was needed! */}
+      {/* Three.js Background */}
       <InteractiveBackground />
 
       {/* A Header  */}
@@ -96,7 +96,7 @@ const SocialLinks = () => {
         </div>
       </header>
 
-      {/* Adding Toggle Theme Button to switch from Day and Night Mode. */}
+      {/* Toggle Theme Button */}
       <div className="absolute top-4 right-4 z-50">
         <div
           className="relative inline-flex items-center cursor-pointer p-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out"
@@ -123,7 +123,7 @@ const SocialLinks = () => {
         </div>
       </div>
 
-      {/* And Here is the Social Links */}
+      {/* Social Links */}
       <div className="relative z-10 flex items-center justify-center py-10 sm:py-12 px-4">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-lg lg:max-w-3xl transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-3xl">
           {/* Animated Title */}
