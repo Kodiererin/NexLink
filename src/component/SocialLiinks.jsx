@@ -24,13 +24,15 @@ const SocialLinks = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Handle theme switch
+  // Adding a Handle theme switch
   const handleThemeSwitch = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
+
+  // These are the Icons and the Social Links.
   const links = [
     { name: "Instagram", icon: <FaInstagram />, url: social.get("instagram") },
     { name: "Facebook", icon: <FaFacebook />, url: social.get("facebook") },
@@ -39,7 +41,7 @@ const SocialLinks = () => {
     { name: "Twitter", icon: <FaTwitter />, url: social.get("twitter") },
   ];
 
-  // Loader component
+  // A Loader component so that the user knows that the background is loading.
   if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
@@ -58,10 +60,10 @@ const SocialLinks = () => {
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       }`}
     >
-      {/* Adding a  Three.js Background */}
+      {/* Three.js Background */}
       <InteractiveBackground />
 
-      {/* Header */}
+      {/* A Header  */}
       <header className="relative z-10 py-8 sm:py-12">
         <div className="flex flex-col items-center justify-center">
           {/* Adding a Glowing Title with Gradient and Shadow */}
@@ -94,13 +96,13 @@ const SocialLinks = () => {
         </div>
       </header>
 
-      {/* Adding Toggle Theme Button For Night Mode :) */}
+      {/* Toggle Theme Button */}
       <div className="absolute top-4 right-4 z-50">
         <div
           className="relative inline-flex items-center cursor-pointer p-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 shadow-lg hover:shadow-2xl transition duration-300 ease-in-out"
           onClick={handleThemeSwitch}
         >
-          <span className="text-2xl">
+          <span className="text-2xl sm:text-3xl">
             {theme === "light" ? (
               <FaSun className="text-yellow-400" />
             ) : (
@@ -108,20 +110,20 @@ const SocialLinks = () => {
             )}
           </span>
           <div
-            className={`ml-2 w-14 h-8 rounded-full transition-all duration-500 ease-in-out transform ${
+            className={`ml-2 w-12 sm:w-14 h-6 sm:h-8 rounded-full transition-all duration-500 ease-in-out transform ${
               theme === "light" ? "bg-yellow-300" : "bg-blue-500"
             }`}
           >
             <div
-              className={`absolute top-0.5 left-0.5 w-7 h-7 rounded-full bg-white transition-all duration-500 ease-in-out ${
-                theme === "light" ? "translate-x-0" : "translate-x-6"
+              className={`absolute top-0.5 left-0.5 w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-white transition-all duration-500 ease-in-out ${
+                theme === "light" ? "translate-x-0" : "translate-x-6 sm:translate-x-7"
               }`}
             ></div>
           </div>
         </div>
       </div>
 
-      {/* So here we go with the Social Links :) */}
+      {/* Social Links */}
       <div className="relative z-10 flex items-center justify-center py-10 sm:py-12 px-4">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-sm sm:max-w-lg lg:max-w-3xl transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-3xl">
           {/* Animated Title */}
